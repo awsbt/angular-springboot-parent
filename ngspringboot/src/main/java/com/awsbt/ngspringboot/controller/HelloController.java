@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 //we allow localhost:4200 for testing purposes
-@CrossOrigin(origins = "http://192.168.1.6:7003")
+//@CrossOrigin(origins = "http://192.168.1.6:7003")
 public class HelloController {
 
  @RequestMapping(value = "/message", produces = MediaType.APPLICATION_JSON_VALUE)
  public Map<String, String> index() {
-     return Collections.singletonMap("message", "Greetings from awsbt Spring Boot!");
+     return Collections.singletonMap("message", "Greetings from awsbt with no CORS Spring Boot!");
  }
 
 }
